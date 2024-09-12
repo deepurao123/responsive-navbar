@@ -1,0 +1,180 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.header {
+    width: 100%;
+    padding: 0 2rem;
+    /* background-color: red; */
+    position: relative;
+    position: fixed;
+    top: 0;
+}
+
+.navbar {
+    width: 100%;
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo a {
+    position: relative;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.navbar .logo a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    bottom: -5px;
+    transform: translateY(10px);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+}
+
+.navbar .logo a:hover::after {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.navbar .links {
+    display: flex;
+    gap: 60px;
+}
+
+.navbar .links li {
+    list-style-type: none;
+}
+
+.navbar .links li a {
+    font-size: 22px;
+    color: white;
+    text-decoration: none;
+    position: relative;
+}
+
+.navbar .links li a:before {
+    position: absolute;
+    content: '';
+    top: 97%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: all 0.5s linear;
+}
+
+.navbar .links li a:hover:before {
+    width: 100%;
+    background-color: #fff;
+}
+
+.navbar .action_btn {
+    background-color: orange;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+}
+
+.navbar .action_btn:hover {
+    scale: 1.05;
+    color: #fff;
+}
+
+.navbar .action_btn:active {
+    scale: 0.95;
+}
+
+.toggle_btn {
+    display: none;
+    color: #fff;
+    font-size: 25px;
+    cursor: pointer;
+}
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+    position: absolute;
+    display: none;
+    top: 70px;
+    right: 2rem;
+    width: 300px;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1); 
+    backdrop-filter: blur(60px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open {
+    height: 240px;
+}
+
+.dropdown_menu .item {
+    list-style-type: none;
+    padding: 0.7rem;
+    display: flex;
+    justify-content: center;
+}
+
+.dropdown_menu .item a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    transition: 0.5s ease;
+}
+
+.dropdown_menu .item a:hover {
+    color: orange;
+}
+
+.dropdown_menu .action_btn {
+    background-color: orange;
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 30px;
+    border-radius: 20px;
+    display: flex;
+    font-size: 16px;
+    font-weight: bold;
+    justify-content: center;
+}
+.container{
+    background-color:rgb(208, 21, 21);
+    /* background: url(./pexels-therato-1933239.jpg) no-repeat; */
+    background-position: center;
+    background-size:cover;
+    /* height:calc(100vh - 70px); */
+    height: 100vh;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.container .container_h1{
+    font-size: 3rem;
+    margin-bottom:1rem;
+}
